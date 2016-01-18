@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'coveralls', require: false
 gem 'devise'
 gem 'carrierwave'
 gem 'fog'
@@ -39,6 +38,7 @@ end
 group :test do
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'coveralls', require: false
 end
 
 group :production do
