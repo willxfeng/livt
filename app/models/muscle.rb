@@ -1,4 +1,4 @@
-class MuscleGroup < ActiveRecord::Base
+class Muscle < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :parent, presence: true

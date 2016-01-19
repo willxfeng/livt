@@ -1,4 +1,4 @@
-describe MuscleGroup do
+describe Muscle do
   it { should have_valid(:name).when('Hamstrings', 'Deltoids') }
   it { should_not have_valid(:name).when(nil, '') }
 
@@ -11,6 +11,6 @@ describe MuscleGroup do
   it { should have_valid(:image_url).when('http://www.amazon.com') }
   it { should_not have_valid(:image_url). when(nil, '') }
 
-  subject { FactoryGirl.create(:muscle_group) }
+  subject { FactoryGirl.create(:muscle) }
   it { should validate_uniqueness_of(:name) }
 end

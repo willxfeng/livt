@@ -1,6 +1,6 @@
-class CreateMuscleGroups < ActiveRecord::Migration
+class CreateMuscles < ActiveRecord::Migration
   def change
-    create_table :muscle_groups do |t|
+    create_table :muscles do |t|
       t.string :name, null: false
       t.text :description, null: false
       t.string :parent, null: false
