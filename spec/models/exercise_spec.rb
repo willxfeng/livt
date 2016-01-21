@@ -1,4 +1,7 @@
 describe Exercise do
+  it { should have_many :personal_records }
+  it { should have_many(:users).through(:personal_records) }
+
   it { should have_valid(:name).when('Squat', 'Millitary Press') }
   it { should_not have_valid(:name).when(nil, '') }
 

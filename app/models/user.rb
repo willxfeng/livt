@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   has_many :muscles
   has_many :muscle_groups, through: :muscles
 
+  has_many :personal_records
+  has_many :exercises, through: :personal_records
+
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
