@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'muscle_groups#index'
+
+  devise_for :users, controllers: {
+    registrations: "registrations",
+    sessions: "sessions"
+  }
 
   resources :muscle_groups, only: [:index, :show]
 end

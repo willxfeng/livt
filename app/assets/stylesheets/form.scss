@@ -1,0 +1,30 @@
+@import "foundation_and_overrides";
+
+$h1-color:      #088da5;
+$border-color:  #000000;
+$h1-color: #088da5;
+
+.border {
+  border: 2px solid $border-color;
+  border-radius: 20px;
+  margin: auto;
+  padding: 20px 30px 0;
+}
+
+h1 {
+  color: $h1-color;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+}
+
+.form-button {
+  margin: auto;
+}
+
+.back-link {
+  margin-top: 20px;
+}

@@ -1,4 +1,5 @@
 describe Muscle do
+  it { should belong_to :user }
   it { should belong_to :muscle_group }
 
   it { should have_valid(:name).when('Hamstrings', 'Deltoids') }

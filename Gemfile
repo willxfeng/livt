@@ -24,7 +24,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl_rails', '~> 4.2'
+  gem 'factory_girl_rails', require: false
   gem 'valid_attribute'
   gem 'shoulda'
   gem 'dotenv-rails'
