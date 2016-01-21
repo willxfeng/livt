@@ -1,5 +1,6 @@
 describe User do
   it { should have_many :muscles }
+  it { should have_many(:muscle_groups).through(:muscles) }
 
   it { should have_valid(:first_name).when("John", "Sally") }
   it { should_not have_valid(:first_name).when(nil, "") }
