@@ -12,7 +12,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'carrierwave'
 gem 'fog'
-gem 'valid_attribute'
 gem 'foundation-rails'
 gem 'puma'
 gem 'cowsay'
