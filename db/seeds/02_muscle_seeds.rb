@@ -1,7 +1,7 @@
-require_relative 'muscle_description'
+require_relative 'muscle_descriptions'
 include MuscleDescriptions
 
-muscle_groups = [
+muscles = [
   [
     'Abdominals',
     ABDOMINALS,
@@ -102,13 +102,13 @@ muscle_groups = [
 
 source = 'freetrainers.com'
 
-muscle_groups.each do |muscle_group|
-  name, description, parent, image_url = muscle_group
+muscles.each do |muscle|
+  name, description, muscle_group, image_url = muscle
 
-  MuscleGroup.find_or_create_by!(
+  Muscle.find_or_create_by!(
     name: name,
     description: description,
-    parent: parent,
+    muscle_group: MuscleGroup.find_by(name: muscle_group),
     image_url: image_url,
     source: source
   )
