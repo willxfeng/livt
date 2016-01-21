@@ -1,0 +1,10 @@
+<h1><%= @muscle_group.name %></h1>
+
+<%= image_tag @muscle_group.image_url %><br>
+<%= @muscle_group.description %><br>
+<%= @muscle_group.source %>
+
+<br>
+<ul>
+  <%= render partial: 'muscles/muscle', collection: @muscles %>
+</ul>
