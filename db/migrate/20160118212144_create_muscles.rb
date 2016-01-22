@@ -6,7 +6,7 @@ class CreateMuscles < ActiveRecord::Migration
 
       t.string :name, null: false, unique: true
       t.text :description
-      t.string :image_url
+      t.string :image
       t.string :source
     end
   end

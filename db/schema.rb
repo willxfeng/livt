@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160122184352) do
   create_table "exercises", force: :cascade do |t|
     t.string "name",                                null: false
     t.text   "description"
-    t.string "gif_url"
+    t.string "gif"
     t.string "type",        default: "Free Weight"
     t.string "difficulty",  default: ""
   end
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160122184352) do
   create_table "muscle_groups", force: :cascade do |t|
     t.string "name",        null: false
     t.text   "description"
-    t.string "image_url"
+    t.string "image"
     t.string "source"
   end
 
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20160122184352) do
     t.integer "user_id",         null: false
     t.string  "name",            null: false
     t.text    "description"
-    t.string  "image_url"
+    t.string  "image"
     t.string  "source"
   end
 

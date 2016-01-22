@@ -3,7 +3,7 @@ class CreateMuscleGroups < ActiveRecord::Migration
     create_table :muscle_groups do |t|
       t.string :name, null: false, unique: true
       t.text :description
-      t.string :img_url
+      t.string :image
       t.string :source
     end
   end

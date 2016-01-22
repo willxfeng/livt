@@ -3,7 +3,7 @@ class CreateExercises < ActiveRecord::Migration
     create_table :exercises do |t|
       t.string :name, null: false
       t.text :description
-      t.string :gif_url
+      t.string :gif
       t.string :type, default: 'Free Weight'
       t.string :difficulty, default: ''
     end

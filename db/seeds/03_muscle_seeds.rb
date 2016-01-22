@@ -110,7 +110,7 @@ muscles.each do |muscle|
     description: description,
     user: User.find_by(email: "default_user@test.com"),
     muscle_group: MuscleGroup.find_by(name: muscle_group),
-    image_url: image_url,
+    image: image_url,
     source: source
   )
 end

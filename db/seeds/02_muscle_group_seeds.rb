@@ -47,7 +47,7 @@ muscle_groups.each do |muscle_group|
   MuscleGroup.find_or_create_by!(
     name: name,
     description: description,
-    image_url: image_url,
+    image: image_url,
     source: source
   )
 end
