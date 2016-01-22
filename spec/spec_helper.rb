@@ -1,6 +1,7 @@
 require 'valid_attribute'
 require 'database_cleaner'
 require 'factory_girl_rails'
+require 'date'
 require_relative 'support/factories'
 
 require 'coveralls'

@@ -4,8 +4,8 @@ class CreateExercises < ActiveRecord::Migration
       t.string :name, null: false
       t.text :description
       t.string :gif_url
-      t.string :type
-      t.string :difficulty
+      t.string :type, default: 'Free Weight'
+      t.string :difficulty, default: ''
     end
   end
 end

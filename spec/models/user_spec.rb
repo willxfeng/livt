@@ -1,4 +1,6 @@
 describe User do
+  it { should have_many :statuses }
+
   it { should have_many :muscles }
   it { should have_many(:muscle_groups).through(:muscles) }
 

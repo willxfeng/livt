@@ -11,17 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122040144) do
+ActiveRecord::Schema.define(version: 20160122184352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string "name",        null: false
+    t.string "name",                                null: false
     t.text   "description"
     t.string "gif_url"
-    t.string "type"
-    t.string "difficulty"
+    t.string "type",        default: "Free Weight"
+    t.string "difficulty",  default: ""
+  end
+
+  create_table "gym_sets", force: :cascade do |t|
+    t.integer "exercise_id",                         null: false
+    t.integer "workout_id",                          null: false
+    t.decimal "weight",                              null: false
+    t.integer "reps",                                null: false
+    t.string  "type",        default: "Working Set", null: false
+    t.boolean "complete",    default: false,         null: false
   end
 
   create_table "muscle_groups", force: :cascade do |t|
@@ -45,6 +54,14 @@ ActiveRecord::Schema.define(version: 20160122040144) do
     t.integer "exercise_id"
     t.decimal "weight",      null: false
     t.integer "reps",        null: false
+    t.date    "date"
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.integer "user_id"
+    t.date    "date",    null: false
+    t.decimal "weight",  null: false
+    t.string  "photo"
   end
 
   create_table "targets", force: :cascade do |t|
@@ -72,5 +89,11 @@ ActiveRecord::Schema.define(version: 20160122040144) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "workouts", force: :cascade do |t|
+    t.date   "date",  null: false
+    t.string "name"
+    t.text   "notes"
+  end
 
 end

@@ -5,9 +5,12 @@ class Exercise < ActiveRecord::Base
   has_many :targets
   has_many :muscles, through: :targets
 
+  has_many :gym_sets
+  has_many :workouts, through: :gym_sets
+
   validates :name, presence: true
   validates :type,
-    inclusion: { in: ['Free Weight', 'Cable Machine', 'Calisthenics'] }
+    inclusion: { in: ['', 'Free Weight', 'Cable Machine', 'Calisthenics'] }
   validates :difficulty,
-    inclusion: { in: %w(Beginner Intermediate Advanced) }
+    inclusion: { in: ['', 'Beginner', 'Intermediate', 'Advanced'] }
 end
