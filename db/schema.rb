@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121220656) do
+ActiveRecord::Schema.define(version: 20160122040144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20160121220656) do
     t.integer "exercise_id"
     t.decimal "weight",      null: false
     t.integer "reps",        null: false
+  end
+
+  create_table "targets", force: :cascade do |t|
+    t.integer "muscle_id"
+    t.integer "exercise_id"
   end
 
   create_table "users", force: :cascade do |t|
