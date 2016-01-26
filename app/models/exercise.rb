@@ -9,7 +9,7 @@ class Exercise < ActiveRecord::Base
   has_many :workouts, through: :gym_sets
 
   validates :name, presence: true
-  validates :type,
+  validates :ex_type,
     inclusion: { in: ['', 'Barbell', 'Dumbbell' 'Cable Machine',
       'Lever Machine', 'Calisthenics'] }
   validates :difficulty,

@@ -17,7 +17,7 @@ describe Exercise do
   it { should_not have_valid(:difficulty).when('Turtles') }
 
   it do
-    should have_valid(:type)
+    should have_valid(:ex_type)
       .when('Barbell', 'Cable Machine', 'Calisthenics')
   end
   it { should_not have_valid(:difficulty).when('Cardio') }

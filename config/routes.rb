@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :muscle_groups, only: [:index, :show]
 
   resources :muscles, only: :show
+
+  resources :exercises, only: :index
 end

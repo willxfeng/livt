@@ -17,11 +17,12 @@ ActiveRecord::Schema.define(version: 20160122184352) do
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string "name",                                null: false
+    t.string "name",                            null: false
     t.text   "description"
     t.string "gif"
-    t.string "type",        default: "Free Weight"
+    t.string "ex_type",     default: "Barbell"
     t.string "difficulty",  default: ""
+    t.string "source"
   end
 
   create_table "gym_sets", force: :cascade do |t|
@@ -52,8 +53,8 @@ ActiveRecord::Schema.define(version: 20160122184352) do
   create_table "personal_records", force: :cascade do |t|
     t.integer "user_id"
     t.integer "exercise_id"
-    t.decimal "weight",      null: false
-    t.integer "reps",        null: false
+    t.decimal "weight",      default: 0.0, null: false
+    t.integer "reps",        default: 1,   null: false
     t.date    "date"
   end
 
