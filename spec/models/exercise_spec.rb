@@ -18,7 +18,7 @@ describe Exercise do
 
   it do
     should have_valid(:type)
-      .when('Free Weight', 'Cable Machine', 'Calisthenics')
+      .when('Barbell', 'Cable Machine', 'Calisthenics')
   end
   it { should_not have_valid(:difficulty).when('Cardio') }
 end
