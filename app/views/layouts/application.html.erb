@@ -29,9 +29,10 @@
 
     <%= yield %>
 
-    <h3><%= Rails.env %></h3>
 
     <% if Rails.env.development? %>
+      <h3><%= Rails.env %></h3>
+    <% else %>
     <% end %>
   </body>
 </html>
