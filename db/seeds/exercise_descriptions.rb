@@ -59,7 +59,7 @@ module ExerciseDescriptions
 
   With elbows to side, raise bar until forearms are vertical. Lower until arms are fully extended. Repeat."
 
-  CLOSE_GRIP_BENCH =
+  CLOSE_GRIP_BENCH_PRESS =
   "Lie on bench and grasp barbell from rack with shoulder width grip.
 
   Lower weight to chest with elbows close to body. Push barbell back up until arms are straight. Repeat."
@@ -84,7 +84,7 @@ module ExerciseDescriptions
 
   Lower dumbbell behind neck or shoulder while maintaining upper arm's vertical position throughout exercise. Extend arm until straight. Return and repeat. Continue with opposite arm."
 
-  WRIST_CURL =
+  DUMBBELL_WRIST_CURL =
   "Sit and grasp dumbbell with underhand grip. Rest forearm on thigh with wrist just beyond knee.
 
   Allow dumbbell to roll out of palm down to fingers. Raise dumbbell back up by gripping and pointing knuckles up as high as possible. Lower and repeat."

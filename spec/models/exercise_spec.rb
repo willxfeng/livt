@@ -12,13 +12,8 @@ describe Exercise do
   it { should_not have_valid(:name).when(nil, '') }
 
   it do
-    should have_valid(:difficulty).when('Beginner', 'Intermediate', 'Advanced', '')
-  end
-  it { should_not have_valid(:difficulty).when('Turtles') }
-
-  it do
     should have_valid(:ex_type)
       .when('Barbell', 'Cable Machine', 'Calisthenics')
   end
-  it { should_not have_valid(:difficulty).when('Cardio') }
+  it { should_not have_valid(:ex_type).when('Turtles') }
 end

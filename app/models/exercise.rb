@@ -10,8 +10,6 @@ class Exercise < ActiveRecord::Base
 
   validates :name, presence: true
   validates :ex_type,
-    inclusion: { in: ['', 'Barbell', 'Dumbbell' 'Cable Machine',
+    inclusion: { in: ['', 'Barbell', 'Dumbbell', 'Cable Machine',
       'Lever Machine', 'Calisthenics'] }
-  validates :difficulty,
-    inclusion: { in: ['', 'Beginner', 'Intermediate', 'Advanced'] }
 end

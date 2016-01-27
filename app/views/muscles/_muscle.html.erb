@@ -1,5 +1,5 @@
 <li>
   <%= link_to muscle.name, muscle_path(muscle) %><br>
   <%= link_to image_tag(muscle.image), muscle_path(muscle) %><br>
-  <%= muscle.source %><br>
+  <%= link_to muscle.source, "http://#{muscle.source}", target: '_blank' %><br>
 </li>

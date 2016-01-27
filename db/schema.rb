@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122184352) do
+ActiveRecord::Schema.define(version: 20160127034648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160122184352) do
     t.text   "description"
     t.string "gif"
     t.string "ex_type",     default: "Barbell"
-    t.string "difficulty",  default: ""
     t.string "source"
   end
 

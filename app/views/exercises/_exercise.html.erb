@@ -1,9 +1,13 @@
 <li>
-  <ul>
-    <li><%= exercise.name %></li>
-    <li><%= image_tag "exercise_gifs/#{exercise.gif}" %></li>
-    <li><%= exercise.ex_type %></li>
-    <li><%= exercise.difficulty %></li>
-    <li><%= exercise.description %></li>
-  </ul>
+  <%= link_to exercise_path(exercise) do %>
+    <div class="bordered-grid">
+      <ul>
+        <li><%= exercise.name %></li>
+        <li><%= image_tag exercise.gif %></li>
+        <li><%= exercise.ex_type %></li>
+        <li><div class="description"><%= exercise.description %></div></li>
+        <li><%= link_to exercise.source, "http://#{exercise.source}", target: '_blank' %></li>
+      </ul>
+    </div>
+  <% end %>
 </li>
