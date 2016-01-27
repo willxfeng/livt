@@ -17,8 +17,7 @@
  */
 
 body {
-  background-image:
-    url(<%= %w(background1.jpg background2.jpg background3.jpg).sample %>);
+  background-image: url(asset-path('background1.jpg'));
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
