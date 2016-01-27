@@ -30,7 +30,7 @@
     <%= yield %>
 
     <% if Rails.env.development? %>
-      javascript_include_tag 'random_bg_img_dev'
+      <%= javascript_include_tag 'random_bg_img_dev' %>
     <% end %>
   </body>
 </html>
