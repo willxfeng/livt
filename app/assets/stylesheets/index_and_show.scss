@@ -9,26 +9,46 @@ $description-bg-color: $jet;
   border-radius: 30px;
   margin: 20px;
   padding: 10px;
-  height: 400px;
+  height: 450px;
   text-align: center;
   overflow: auto;
 
-    ul {
-      list-style-type: none;
-      li {
-        margin-bottom: 7px;
-      }
+  .li-name {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .li-type, .li-source {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  img:hover {
+    transform: scale(1.75);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    li {
+      margin-bottom: 7px;
     }
+  }
 }
 
 .bordered-grid:hover {
-  margin: 10px;
+  transform: scale(1.1);
 }
 
 .description {
   background-color: $description-bg-color;
   border-radius: 15px;
-  height: 150px;
+  height: 180px;
   overflow: auto;
   font-size: 12px;
 }

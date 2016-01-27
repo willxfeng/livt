@@ -15,8 +15,10 @@
  //= require foundation_and_overrides
 
  */
+
 body {
-  background-image: url('background3.jpg');
+  background-image:
+    url(<%= %w(background1.jpg background2.jpg background3.jpg).sample %>);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
