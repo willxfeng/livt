@@ -7,4 +7,11 @@ $(document).ready(function() {
     fade: true,
     groupBy: 'title'
   });
+
+  $('.body-area').hover(function(){
+    $('.hover-show').empty();
+    // $(this).attr('title');
+  }, function() {
+
+  });
 });

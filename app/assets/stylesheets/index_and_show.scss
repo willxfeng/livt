@@ -1,21 +1,34 @@
 @import "foundation_and_overrides";
 
 $div-bg-color: $tuatara;
+$bg-opacity: 0.6;
 $description-bg-color: $jet;
 
-p {
+.welcome {
+  color: $iron;
+  margin: 0;
+	padding: 0px 0px 6px 0px;
+	font-size: 36px;
+	line-height: 44px;
+	font-weight: bold;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
   text-align: center;
-  color: $snow;
+}
+
+.body-img {
+  float: left;
+  opacity: 0.9;
 }
 
 .hover-show {
-  float: right;
-  background-color: $div-bg-color;
+  margin-left: 550px;
+  height: 500px;
+  background-color: rgba($div-bg-color, $bg-opacity);
   border-radius: 30px;
 }
 
 .bordered-grid {
-  background-color: $div-bg-color;
+  background-color: rgba($div-bg-color, $bg-opacity);
   border: 2px solid $div-bg-color;
   border-radius: 30px;
   margin: 20px;

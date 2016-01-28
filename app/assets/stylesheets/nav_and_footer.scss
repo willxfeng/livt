@@ -1,0 +1,54 @@
+@import "foundation_and_overrides";
+
+$background-color: #088da5;
+$white: #ffffff;
+
+.search-bar span {
+  display: inline-block;
+}
+
+.search-button {
+  background-color: $white;
+  color: $background-color;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-img {
+  height: $topbar-height;
+}
+
+.footer {
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer p.slogan {
+  color: #8d9093;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.footer p.copywrite {
+  color: #8f9296;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer .links a {
+  color: #ffffff;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 3rem 0 2rem;
+}
+
+.footer .links a::after {
+  content: "•";
+  padding: 0 0.4rem 0 0.8rem;
+}
+
+.footer .links a:last-child::after {
+  content: "";
+  padding: 0 0.4rem 0 0.8rem;
+}

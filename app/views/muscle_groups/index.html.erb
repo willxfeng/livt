@@ -1,8 +1,4 @@
-<h1>Muscle Groups</h1>
-
-<p>
-  Hover over a muscle group on the anatomy diagram to display details
-</p>
+<div class="welcome">Welcome to livt, the web application that gives lifters the freedom to fully customize their workouts!</div>
 
 <div class="body-img">
   <%= image_tag asset_path('home_image.png'), id: "blank-body", usemap: "#body-map" %>
@@ -76,11 +72,8 @@
 </div>
 
 <div class="hover-show">
-  <h3>Hover the mouse over the diagram to the left to see details on muscle groups</h3>
+  <h4>Hover the mouse over the diagram to the left to see details on muscle groups</h4>
+  <h4>Click to see related exercises</h4>
 </div>
-
-<ul>
-  <%= render partial: 'muscle_group', collection: @muscle_groups %>
-</ul>
 
 <%= javascript_include_tag "body_map" %>

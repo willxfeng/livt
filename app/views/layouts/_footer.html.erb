@@ -1,0 +1,14 @@
+<footer class="footer">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="slogan">livt</p>
+          <p class="links">
+            <%= link_to "Muscle Group", root_path %>
+            <%= link_to "Exercises", exercises_path %>
+            <% unless user_signed_in? %>
+              <%= link_to "Sign In", new_user_session_path %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </footer>
