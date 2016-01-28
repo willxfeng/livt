@@ -17,7 +17,8 @@
  */
 
 body {
-  background-image: url(asset-path('background3.jpg'));
+  // background-image: url(asset-path('background3.jpg'));
+  background-image: url('https://s3.amazonaws.com/livt-backgrounds/background2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
