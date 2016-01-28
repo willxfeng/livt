@@ -9,8 +9,6 @@ $(document).ready(function() {
   });
 
   $('.body-area').hover(function(){
-    $('.hover-show').empty();
-
     var muscleGroupID = this.id.split('-')[0];
     var request = $.ajax({
       method: 'GET',
@@ -22,24 +20,24 @@ $(document).ready(function() {
       var group = response.group;
       var muscles = response.muscles;
       var div = $('.hover-show');
+      var ul = $('#hover-muscles');
 
       div.css('padding-top', '10px');
 
-      div.append(
-        "<h2>" + group.name + "</h2>",
-        "<p>" + group.description + "</p>"
-      );
+      $('h3').empty();
 
-      div.append("<ul>");
+      $('#muscle-name').text(group.name);
+      $('#muscle-desc').text(group.description);
+
+      ul.empty();
       for (var i = 0; i < muscles.length; i++) {
-        div.append("<li><ul>");
-        div.append("<li><a href='/muscles/" + muscles[i].id +
-        "'>" + muscles[i].name + "</a></li>");
-        div.append("<li><a href='/muscles/" + muscles[i].id +
-        "'><img src='" + muscles[i].image + "' '/></a></li>");
-        div.append("</ul></li>");
+        ul.append("<li>");
+        ul.append("<a href='/muscles/" + muscles[i].id +
+        "'>" + muscles[i].name + "</a><br>");
+        ul.append("<a href='/muscles/" + muscles[i].id +
+        "'><img src='" + muscles[i].image + "' '/></a><br>");
+        ul.append("</li>");
       }
-      div.append("</ul>");
 
       $('ul').addClass('hoverlist');
     });

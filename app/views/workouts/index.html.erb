@@ -4,25 +4,39 @@
   </span>
 </div>
 
-<ul class="calendar">
-    <li class="title">June 4-10</li>
-    <li class="day-header">
-        <div class="large-1 day">Sun</div>
-        <div class="large-1 day">Mon</div>
-        <div class="large-1 day">Tue</div>
-        <div class="large-1 day">Wed</div>
-        <div class="large-1 day">Thu</div>
-        <div class="large-1 day">Fri</div>
-        <div class="large-1 day">Sat</div>
-    </li>
+<div class="switch round view-switch">
+  <p>Calendar View</p>
+  <span class='mon'>Month</span>
+  <input id="on-off" type="checkbox">
+    <label for="on-off">
+      <span class="switch-on"></span>
+      <span class="switch-off"></span>
+  </label>
+  <span class='wee'>Week</span>
+</div>
 
-    <li class="month">
-        <div class="large-1 day">4</div>
-        <div class="large-1 day">5</div>
-        <div class="large-1 day">6</div>
-        <div class="large-1 day">7</div>
-        <div class="large-1 day">8</div>
-        <div class="large-1 day">9</div>
-        <div class="large-1 day">10</div>
-    </li>
-</ul>
+<div class="calendar-div month">
+  <%= month_calendar events: @workouts do |date, workouts| %>
+    <%= date.day %>
+
+    <% workouts.each do |workout| %>
+      <div>
+        <%= workout.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="calendar-div week">
+  <%= week_calendar events: @workouts do |date, workouts| %>
+    <%= date.day %>
+
+    <% workouts.each do |workout| %>
+      <div>
+        <%= workout.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= javascript_include_tag "calendar" %>

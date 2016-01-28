@@ -1,0 +1,92 @@
+@import "foundation_and_overrides";
+
+$event-bg-color: #06c2f4;
+$bg-color: #e7e3d7;
+$opacity: 0.9;
+
+.view-switch {
+  text-align: center;
+  p {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: $silver;
+    font-size: 22px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+}
+
+.mon {
+  font-size: 20px;
+  color: red;
+}
+
+.wee {
+  font-size: 20px;
+  color: blue
+}
+
+.switch-on {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+}
+
+.switch-off {
+  position: absolute;
+  left: -25px;
+  top: 10px;
+}
+
+.calendar-div {
+  margin: 50px;
+}
+
+.week {
+  display: none;
+}
+
+.simple-calendar {
+  opacity: $opacity;
+
+  font-size: 28px;
+  color: $silver;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  .day {
+    background-color: $bg-color;
+    border: 1px solid red;
+    font-size: 18px;
+    text-shadow: none;
+  }
+
+  .wday-0 {
+  }
+  .wday-1 {
+  }
+  .wday-2 {
+  }
+  .wday-3 {
+  }
+  .wday-4 {
+  }
+  .wday-5 {
+  }
+  .wday-6 {
+  }
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+  }
+  .next-month { }
+  .current-month {
+  }
+
+  .has-events {
+    background-color: $event-bg-color;
+  }
+}

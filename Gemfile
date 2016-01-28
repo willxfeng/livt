@@ -20,6 +20,7 @@ gem 'cowsay'
 gem 'kaminari'
 gem 'pg_search'
 gem 'slick_rails'
+gem "simple_calendar", "~> 2.0"
 
 group :development, :test do
   gem 'pry-rails'
