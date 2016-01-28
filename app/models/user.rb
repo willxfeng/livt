@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :statuses
+  has_many :workouts
 
   has_many :muscles
   has_many :muscle_groups, through: :muscles

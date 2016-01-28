@@ -37,6 +37,11 @@ muscle_groups = [
     CHEST,
     'https://www.freetrainers.com/redbody/eJzbY2hACGBXEW9gbgoAhV0MOg==.png'
   ],
+  [
+    'Hips',
+    HIPS,
+    'https://www.freetrainers.com/redbody/eJzbY2iADRga4BKHgXgDc1MAhZsMPA==.png'
+  ]
 ]
 
 source = 'freetrainers.com'

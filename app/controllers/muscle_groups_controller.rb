@@ -6,5 +6,15 @@ class MuscleGroupsController < ApplicationController
   def show
     @muscle_group = MuscleGroup.find(params[:id])
     @muscles = @muscle_group.muscles
+
+    if params[:ajax]
+      muscle_group = MuscleGroup.find(params[:id])
+      muscles = muscle_group.muscles
+
+      render json: {
+        group: muscle_group,
+        muscles: muscles
+      }
+    end
   end
 end

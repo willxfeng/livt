@@ -1,12 +1,15 @@
 @import "foundation_and_overrides";
+@import "index_and_show";
 
 $border-color:  #000000;
 
 .border {
   border: 2px solid $border-color;
-  border-radius: 20px;
+  border-radius: 30px;
   margin: auto;
   padding: 20px 30px 0;
+  background-color: rgba($tuatara, $bg-opacity);
+  color: $snow;
 }
 
 h1 {

@@ -1,6 +1,6 @@
 @import "foundation_and_overrides";
 
-$background-color: #088da5;
+$background-color: $aluminum;
 $white: #ffffff;
 
 .search-bar span {
@@ -9,7 +9,7 @@ $white: #ffffff;
 
 .search-button {
   background-color: $white;
-  color: $background-color;
+  color: rgba($background-color, $nav-opacity);
   font-family: 'Ubuntu', sans-serif;
 }
 

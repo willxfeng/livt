@@ -1,23 +1,30 @@
 @import "foundation_and_overrides";
 
+$welcome-color: $base;
 $div-bg-color: $tuatara;
 $bg-opacity: 0.6;
 $description-bg-color: $jet;
 
+h1 h2 h3 h4 {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .welcome {
-  color: $iron;
+  color: $welcome-color;
   margin: 0;
 	padding: 0px 0px 6px 0px;
 	font-size: 36px;
 	line-height: 44px;
 	font-weight: bold;
   font-family: times, Times New Roman, times-roman, georgia, serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
 }
 
 .body-img {
   float: left;
   opacity: 0.9;
+  text-align: center;
 }
 
 .hover-show {
@@ -31,6 +38,7 @@ $description-bg-color: $jet;
   border-radius: 30px;
   text-align: center;
   vertical-align: middle;
+  overflow: auto;
 }
 
 .bordered-grid {
