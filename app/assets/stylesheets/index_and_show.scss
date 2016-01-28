@@ -3,6 +3,17 @@
 $div-bg-color: $tuatara;
 $description-bg-color: $jet;
 
+p {
+  text-align: center;
+  color: $snow;
+}
+
+.hover-show {
+  float: right;
+  background-color: $div-bg-color;
+  border-radius: 30px;
+}
+
 .bordered-grid {
   background-color: $div-bg-color;
   border: 2px solid $div-bg-color;
