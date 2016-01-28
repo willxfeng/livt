@@ -1,7 +1,7 @@
 class MusclesController < ApplicationController
   def index
     render json: {
-      key: 'value'
+      key: params[:title]
     }
   end
 

@@ -9,9 +9,17 @@ $(document).ready(function() {
   });
 
   $('.body-area').hover(function(){
-    $('.hover-show').empty();
-    // $(this).attr('title');
-  }, function() {
+    // $('.hover-show').empty();
+    var request = $.ajax({
+      method: 'GET',
+      url: '/muscles',
+      data: { title: $(this).attr('title') }
+    });
 
+    request.done(function(response) {
+      $('.hover-show').text(response.key);
+    });
+  }, function() {
+    $('.hover-show').empty();
   });
 });
