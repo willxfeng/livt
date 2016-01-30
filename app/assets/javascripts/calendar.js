@@ -1,23 +1,23 @@
 $(document).ready(function() {
+  $(".month .day").css('height', '120px');
+  $(".week .day").css('height', '450px');
+
   $(".day").hover(function(e){
-    $(this).css('cursor', 'pointer');
     originalColor = $(this).css('background-color');
     $(this).css('background-color', '#ff8642');
+    $(this).children('.add-workout').show();
   }, function(e){
     $(this).css('background-color', originalColor);
-  });
-
-  $(".day").on('click', function(e){
-    alert('sup');
+    $(this).children('.add-workout').hide();
   });
 
   $('#on-off').change(function(e) {
     if($(this).prop('checked')) {
-      $('.month').css('display', 'none');
-      $('.week').css('display', 'inline');
+      $('.month').hide();
+      $('.week').show();
     } else {
-      $('.week').css('display', 'none');
-      $('.month').css('display', 'inline');
+      $('.week').hide();
+      $('.month').show();
     }
   });
 });

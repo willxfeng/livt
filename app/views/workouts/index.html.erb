@@ -17,7 +17,19 @@
 
 <div class="calendar-div month">
   <%= month_calendar events: @workouts do |date, workouts| %>
-    <%= date.day %>
+    <%= date.day %><br>
+
+    <% if workouts.empty? %>
+      <div class="add-workout">
+        <%= link_to "Add Workout", "#", "data-reveal-id" => "day-modal" %>
+      </div>
+
+      <div id="day-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h2 id="modalTitle">Add a workout for <%= date %></h2>
+        <%= render "form" %>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+    <% end %>
 
     <% workouts.each do |workout| %>
       <div>
@@ -30,6 +42,18 @@
 <div class="calendar-div week">
   <%= week_calendar events: @workouts do |date, workouts| %>
     <%= date.day %>
+
+    <% if workouts.empty? %>
+      <div class="add-workout">
+        <%= link_to "Add Workout", "#", "data-reveal-id" => "day-modal" %>
+      </div>
+
+      <div id="day-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <h2 id="modalTitle">Add a workout for <%= date %></h2>
+        <%= render "form" %>
+        <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+      </div>
+    <% end %>
 
     <% workouts.each do |workout| %>
       <div>

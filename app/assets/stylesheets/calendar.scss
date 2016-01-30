@@ -3,6 +3,8 @@
 $event-bg-color: #06c2f4;
 $bg-color: #e7e3d7;
 $opacity: 0.9;
+// $modal-bg-color: #faebd7;
+$modal-bg-color: $black;
 
 .view-switch {
   text-align: center;
@@ -57,6 +59,12 @@ $opacity: 0.9;
     border: 1px solid red;
     font-size: 18px;
     text-shadow: none;
+    height: 300px;
+    .add-workout {
+      margin-top: 50px;
+      text-align: center;
+      display: none;
+    }
   }
 
   .wday-0 {
