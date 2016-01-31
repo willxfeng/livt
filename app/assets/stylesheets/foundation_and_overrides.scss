@@ -642,7 +642,7 @@ $header-font-color: #ba9077;
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-$form-label-font-size: rem-calc(18);
+$form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
@@ -1151,7 +1151,7 @@ $reveal-modal-bg: $charcoal;
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
-// $reveal-radius: $global-radius;
+$reveal-radius: 30px;
 // $reveal-round: $global-rounded;
 
 // We use these to control the modal border
