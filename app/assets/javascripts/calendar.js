@@ -27,12 +27,12 @@ $(document).ready(function() {
     }
   });
 
-  $('.set-row').on('click', '.remove-button', function(e){
+  $('#sets-div').on('click', '.remove-button', function(e){
     e.preventDefault();
     $(this).closest('.set-row').remove();
   });
 
-  $('.set-row').on('click', '.new-button', function(e){
+  $('#sets-div').on('click', '.new-button', function(e){
     e.preventDefault();
     var thisButton = $(this);
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
     });
 
     request.done(function(response) {
-      thisButton.closest('.set-row').clone().appendTo('.reveal-modal');
+      thisButton.closest('.set-row').clone().appendTo('#sets-div');
     });
   });
 });
