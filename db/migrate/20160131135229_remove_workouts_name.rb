@@ -1,5 +1,5 @@
 class RemoveWorkoutsName < ActiveRecord::Migration
-  def chnage
-    remove_column :workouts, :name
+  def change
+    remove_column :workouts, :name, :string
   end
 end

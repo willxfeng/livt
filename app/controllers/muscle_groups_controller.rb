@@ -4,22 +4,18 @@ class MuscleGroupsController < ApplicationController
   end
 
   def show
-    @muscle_group = MuscleGroup.find(params[:id])
+    muscle_group = MuscleGroup.find(params[:id])
     if user_signed_in?
-      @muscles = current_user.muscles.where(muscle_group: @muscle_group) +
-        default_user.muscles.where(muscle_group: @muscle_group)
+      muscles = (current_user.muscles.where(muscle_group: muscle_group) +
+        default_user.muscles.where(muscle_group: muscle_group))
+        .sort_by{ |ex| ex.name.downcase }
     else
-      @muscles = default_user.muscles.where(muscle_group: @muscle_group)
+      muscles = default_user.muscles.where(muscle_group: muscle_group)
     end
 
-    if params[:ajax]
-      muscle_group = MuscleGroup.find(params[:id])
-      muscles = muscle_group.muscles
-
-      render json: {
-        group: muscle_group,
-        muscles: muscles
-      }
-    end
+    render json: {
+      group: muscle_group,
+      muscles: muscles
+    }
   end
 end

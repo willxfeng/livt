@@ -1,7 +1,5 @@
 <div class="welcome">
-  <span class="welcome-text">
-    My Workouts
-  </span>
+  <h1>My Workouts</h1>
 </div>
 
 <div class="switch round view-switch">
@@ -59,7 +57,7 @@
 
 <div id="day-modal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
   <h2 id="modalTitle">Add a workout</h2>
-  <%= render "form", exercises: @exercises %>
+  <%= render "form", groups: @groups, muscles: @muscles, exercises: @exercises %>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 

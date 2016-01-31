@@ -5,15 +5,19 @@ $div-bg-color: $tuatara;
 $bg-opacity: 0.6;
 $description-bg-color: $jet;
 
+.flash-text {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+
 ul {
   list-style-type: none;
 }
 
 .welcome {
   color: $welcome-color;
-  margin: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 10px;
 	line-height: 44px;
   font-size: 36px;
   font-family: times, Times New Roman, times-roman, georgia, serif;
@@ -22,6 +26,9 @@ ul {
 }
 
 .welcome-home {
+  margin: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 48px;
   font-weight: bold;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;

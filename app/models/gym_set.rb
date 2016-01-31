@@ -9,6 +9,5 @@ class GymSet < ActiveRecord::Base
     only_integer: true,
     greater_than: 0
   }
-  validates :type, presence: true, inclusion: { in: ['Warmup', 'Working Set'] }
-  validates :complete, presence: true
+  validates :set_type, presence: true, inclusion: { in: ['Warmup', 'Working Set'] }
 end

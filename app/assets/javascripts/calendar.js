@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".month .day").css('height', '120px');
+  $(".month .day").css('height', '140px');
   $(".week .day").css('height', '450px');
 
   $(".day").hover(function(e){

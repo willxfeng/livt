@@ -2,14 +2,80 @@
   <%= f.hidden_field :date, id: 'hidden-date' %>
 
   <%= f.fields_for :gym_sets do |gs| %>
-    <%= gs.collection_select :exercise_id, exercises, :id, :name %>
-    <%= gs.number_field :weight %>
-    <%= gs.number_field :reps %>
+    <div class="row">
+      <div class="small-10 medium-4 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-3 columns">
+            <%= label_tag "Group" %>
+          </div>
+          <div class="small-9 columns">
+            <%= select_tag "groups",
+              options_from_collection_for_select(groups, :id, :name) %>
+          </div>
+        </div>
+      </div>
 
-    <%= gs.radio_button :type, 'Warmup' %>
-    <%= label :type, 'Warmup' %>
-    <%= gs.radio_button :type, 'Working Set', checked: true %>
-    <%= label :contactmethod_sms, 'Working Set' %>
+      <div class="small-10 medium-4 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-3 columns">
+            <%= label_tag "Muscle" %>
+          </div>
+          <div class="small-9 columns">
+            <%= select_tag "muscles",
+              options_from_collection_for_select(muscles, :id, :name) %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-10 medium-4 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-3 columns">
+            <%= gs.label :exercise_id, "Exercise" %>
+          </div>
+          <div class="small-9 columns">
+            <%= gs.collection_select :exercise_id, exercises, :id, :name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-6 medium-3 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-6 columns">
+            <%= gs.label :weight, "Weight(lb)" %>
+          </div>
+          <div class="small-6 columns">
+            <%= gs.number_field :weight, value: 0 %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-6 medium-2 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-5 columns">
+            <%= gs.label :reps %>
+          </div>
+          <div class="small-7 columns">
+            <%= gs.number_field :reps, value: 1 %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-10 medium-5 columns">
+        <div class="row collapse prefix-round">
+          <div class="small-2 columns">
+            <%= gs.label :set_type, "Type" %>
+          </div>
+          <div class="small-10 columns">
+            <%= gs.radio_button :set_type, 'Warmup' %>
+            <%= label :set_type, 'Warmup' %>
+            <%= gs.radio_button :set_type, 'Working Set', checked: true %>
+            <%= label :set_type, 'Working Set' %>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 
   <div class="field">
