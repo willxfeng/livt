@@ -11,8 +11,11 @@ $description-bg-color: $jet;
   padding: 5px;
 }
 
-ul {
+#hover-muscles {
   list-style-type: none;
+  li {
+    display: inline-block;
+  }
 }
 
 .welcome {
