@@ -15,9 +15,26 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    workout = create_workout
-    workout_params[:gym_sets_attributes].values.each do |value|
-      workout.gym_sets.create!(value)
+    if params[:ajax]
+      workout = Workout.new
+      groups = MuscleGroup.order('name')
+      muscles = (current_user.muscles + default_user.muscles)
+        .sort_by{ |ex| ex.name.downcase }
+      exercises = Exercise.where(user: current_user) +
+        Exercise.where(user: User.find_by(email: 'default_user@test.com'))
+      workout.gym_sets.build
+
+      render json: {
+        workout: workout,
+        groups: groups,
+        muscles: muscles,
+        exercises: exercises
+      }
+    else
+      workout = create_workout
+      workout_params[:gym_sets_attributes].values.each do |value|
+        workout.gym_sets.create!(value)
+      end
     end
   end
 

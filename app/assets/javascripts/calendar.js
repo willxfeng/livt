@@ -26,4 +26,24 @@ $(document).ready(function() {
       $('.month').show();
     }
   });
+
+  $('.set-row').on('click', '.remove-button', function(e){
+    e.preventDefault();
+    $(this).closest('.set-row').remove();
+  });
+
+  $('.set-row').on('click', '.new-button', function(e){
+    e.preventDefault();
+    var thisButton = $(this);
+
+    var request = $.ajax({
+      method: 'POST',
+      url: '/workouts',
+      data: { ajax: true }
+    });
+
+    request.done(function(response) {
+      thisButton.closest('.set-row').clone().appendTo('.reveal-modal');
+    });
+  });
 });
