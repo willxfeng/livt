@@ -31,12 +31,10 @@ $(document).ready(function() {
 
       ul.empty();
       for (var i = 0; i < muscles.length; i++) {
-        ul.append("<li>");
-        ul.append("<a href='/muscles/" + muscles[i].id +
-        "'>" + muscles[i].name + "</a><br>");
-        ul.append("<a href='/muscles/" + muscles[i].id +
-        "'><img src='" + muscles[i].image + "' '/></a><br>");
-        ul.append("</li>");
+        ul.append("<li><a href='/muscles/" + muscles[i].id +
+          "'>" + muscles[i].name + "</a><br>" +
+        "<a href='/muscles/" + muscles[i].id +
+          "'><img src='" + muscles[i].image + "' '/></a></li>");
       }
 
       $('ul').addClass('hoverlist');

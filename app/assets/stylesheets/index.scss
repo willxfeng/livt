@@ -18,6 +18,7 @@ $description-bg-color: $jet;
   }
 }
 
+
 .welcome {
   color: $welcome-color;
   margin: 10px;
@@ -53,7 +54,6 @@ $description-bg-color: $jet;
   background-color: rgba($div-bg-color, $bg-opacity);
   border-radius: 30px;
   text-align: center;
-  vertical-align: middle;
   overflow: auto;
 }
 
