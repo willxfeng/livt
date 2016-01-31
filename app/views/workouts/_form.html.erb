@@ -1,8 +1,16 @@
 <%= form_for @workout do |f| %>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+  <%= f.hidden_field :date, id: 'hidden-date' %>
+
+  <%= f.fields_for :gym_sets do |gs| %>
+    <%= gs.collection_select :exercise_id, exercises, :id, :name %>
+    <%= gs.number_field :weight %>
+    <%= gs.number_field :reps %>
+
+    <%= gs.radio_button :type, 'Warmup' %>
+    <%= label :type, 'Warmup' %>
+    <%= gs.radio_button :type, 'Working Set', checked: true %>
+    <%= label :contactmethod_sms, 'Working Set' %>
+  <% end %>
 
   <div class="field">
     <%= f.label :notes %>

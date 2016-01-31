@@ -1,1 +1,22 @@
-<h1><%= @exercise.name %></h1>
+<div class="welcome">
+  <h1><%= @exercise.name %></h1>
+</div>
+
+<div class="show-div">
+  <div class="show-img">
+    <%= image_tag @exercise.gif %><br>
+    <%= link_to "source: #{@exercise.source}", "http://#{@exercise.source}", target: '_blank' %>
+  </div>
+
+  <div class="show-desc">
+    <%= @exercise.description %>
+  </div>
+</div>
+
+<div class="welcome">  
+  <h1>Muscles targeted by <%= @exercise.name %></h1>
+</div>
+
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+  <%= render @muscles %>
+</ul>

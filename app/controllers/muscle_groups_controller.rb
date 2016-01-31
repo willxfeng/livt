@@ -5,7 +5,12 @@ class MuscleGroupsController < ApplicationController
 
   def show
     @muscle_group = MuscleGroup.find(params[:id])
-    @muscles = @muscle_group.muscles
+    if user_signed_in?
+      @muscles = current_user.muscles.where(muscle_group: @muscle_group) +
+        default_user.muscles.where(muscle_group: @muscle_group)
+    else
+      @muscles = default_user.muscles.where(muscle_group: @muscle_group)
+    end
 
     if params[:ajax]
       muscle_group = MuscleGroup.find(params[:id])

@@ -1,6 +1,6 @@
 @import "foundation_and_overrides";
 
-$welcome-color: $smoke;
+$welcome-color: $iron;
 $div-bg-color: $tuatara;
 $bg-opacity: 0.6;
 $description-bg-color: $jet;
@@ -11,14 +11,20 @@ ul {
 
 .welcome {
   color: $welcome-color;
-  margin: 0;
-	padding: 0px 0px 6px 0px;
-	font-size: 36px;
+  margin: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 	line-height: 44px;
-	font-weight: bold;
+  font-size: 36px;
   font-family: times, Times New Roman, times-roman, georgia, serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   text-align: center;
+}
+
+.welcome-home {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .body-img {
@@ -30,7 +36,7 @@ ul {
 .hover-show {
   margin-left: 540px;
   margin-right: 10px;
-  padding-top: 200px;
+  padding-top: 170px;
   padding-left: 20px;
   padding-right: 20px;
   height: 480px;
@@ -66,7 +72,7 @@ ul {
     border-radius: 10px;
   }
 
-  img:hover {
+  .ex-gif:hover {
     transform: scale(1.6);
   }
 
@@ -81,6 +87,10 @@ ul {
 
 .bordered-grid:hover {
   transform: scale(1.2);
+}
+
+.bordered-grid-muscle {
+  height: 490px;
 }
 
 .description {

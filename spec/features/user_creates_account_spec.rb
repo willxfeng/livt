@@ -1,7 +1,7 @@
 feature 'user creates an account' do
   before :each do
     visit root_path
-    click_link "Sign Up Here!"
+    click_link "Sign Up Here"
   end
 
   scenario "user specifies valid and required info" do

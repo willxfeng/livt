@@ -11,6 +11,12 @@ $(document).ready(function() {
     $(this).children('.add-workout').hide();
   });
 
+  $(".add-workout-link").click(function(e) {
+    var workoutDate = $(this).attr('id');
+    $("#modalTitle").text('Add workout for ' + workoutDate);
+    $("#hidden-date").val(workoutDate);
+  });
+
   $('#on-off').change(function(e) {
     if($(this).prop('checked')) {
       $('.month').hide();

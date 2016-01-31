@@ -2,7 +2,7 @@ feature 'user signs in' do
 
   before :each do
     visit root_path
-    click_link "Sign In!"
+    click_link "Sign In"
   end
 
   scenario "an existing user specifies valid email and password" do

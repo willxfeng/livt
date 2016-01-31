@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128174831) do
+ActiveRecord::Schema.define(version: 20160130202345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: :cascade do |t|
-    t.string "name",                            null: false
-    t.text   "description"
-    t.string "gif"
-    t.string "ex_type",     default: "Barbell"
-    t.string "source"
+    t.string  "name",                            null: false
+    t.text    "description"
+    t.string  "gif"
+    t.string  "ex_type",     default: "Barbell"
+    t.string  "source"
+    t.integer "user_id",                         null: false
   end
 
   create_table "gym_sets", force: :cascade do |t|
@@ -94,7 +95,7 @@ ActiveRecord::Schema.define(version: 20160128174831) do
     t.date    "date",    null: false
     t.string  "name"
     t.text    "notes"
-    t.integer "user_id"
+    t.integer "user_id", null: false
   end
 
 end

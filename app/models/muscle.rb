@@ -5,5 +5,5 @@ class Muscle < ActiveRecord::Base
   has_many :targets
   has_many :exercises, through: :targets
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
 end

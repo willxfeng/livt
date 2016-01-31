@@ -1,12 +1,10 @@
 class User < ActiveRecord::Base
   has_many :statuses
   has_many :workouts
+  has_many :exercises
 
   has_many :muscles
   has_many :muscle_groups, through: :muscles
-
-  has_many :personal_records
-  has_many :exercises, through: :personal_records
 
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable

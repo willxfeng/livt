@@ -38,4 +38,8 @@ class ApplicationController < ActionController::Base
       session[:previous_url] || root_path
     end
   end
+
+  def default_user
+    User.find_by(email: "default_user@test.com")
+  end
 end

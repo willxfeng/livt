@@ -1,6 +1,5 @@
 class Exercise < ActiveRecord::Base
-  has_many :personal_records
-  has_many :users, through: :personal_records
+  belongs_to :user
 
   has_many :targets
   has_many :muscles, through: :targets

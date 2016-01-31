@@ -1,5 +1,22 @@
-<h1><%= @muscle.name %></h1>
+<div class="welcome">
+  <h1><%= @muscle.name %></h1>
+</div>
 
-<%= image_tag @muscle.image %><br>
-<%= @muscle.description %><br>
-<%= @muscle.source %>
+<div class="show-div">
+  <div class="show-img">
+    <%= image_tag @muscle.image %><br>
+    <%= link_to "source: #{@muscle.source}", "http://#{@muscle.source}", target: '_blank' %>
+  </div>
+
+  <div class="show-desc">
+    <%= @muscle.description %>
+  </div>
+</div>
+
+<div class="welcome">
+  <h1>Exercise that target <%= @muscle.name %></h1>
+</div>
+
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+  <%= render @exercises %>
+</ul>

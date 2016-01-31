@@ -266,7 +266,7 @@ exercises = [
     'exercise_gifs/MuscleUp.gif',
     'Calisthenics'
   ]
-  ]
+]
 
 source = 'exrx.net'
 
@@ -278,6 +278,7 @@ exercises.each do |exercise|
     description: description,
     gif: gif_url,
     ex_type: ex_type,
-    source: source
+    source: source,
+    user: User.find_by(email: "default_user@test.com")
   )
 end
