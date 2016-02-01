@@ -1,10 +1,18 @@
 class ExercisesController < ApplicationController
   def index
-    if user_signed_in?
-      @exercises = (default_user.exercises + current_user.exercises)
-        .sort_by{ |ex| ex.name.downcase }
+    if params[:ajax]
+      exercises = Muscle.find(params[:muscleId]).exercises
+
+      render json: {
+        exercises: exercises
+      }
     else
-      @exercises = default_user.exercises.order('lower(name)')
+      if user_signed_in?
+        @exercises = (default_user.exercises + current_user.exercises)
+          .sort_by{ |ex| ex.name.downcase }
+      else
+        @exercises = default_user.exercises.order('lower(name)')
+      end
     end
   end
 

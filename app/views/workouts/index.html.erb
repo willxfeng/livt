@@ -27,9 +27,16 @@
     <% end %>
 
     <% workouts.each do |workout| %>
-      <div>
-        <%= workout.notes %>
-      </div>
+    <div>
+      <h4><%= workout.notes %></h4>
+      <ul>
+        <% workout.gym_sets.each do |gs| %>
+          <li>
+            <%= gs.exercise.name + ': ' + gs.weight.to_i.to_s + 'lb x ' + gs.reps.to_s %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
     <% end %>
   <% end %>
 </div>
@@ -49,7 +56,14 @@
 
     <% workouts.each do |workout| %>
       <div>
-        <%= workout.notes %>
+        <h4><%= workout.notes %></h4>
+        <ul>
+          <% workout.gym_sets.each do |gs| %>
+            <li>
+              <%= gs.exercise.name + ': ' + gs.weight.to_i.to_s + 'lb x ' + gs.reps.to_s %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     <% end %>
   <% end %>

@@ -4,10 +4,10 @@ class WorkoutsController < ApplicationController
       @workouts = current_user.workouts
       @workout = Workout.new
       @groups = MuscleGroup.order('name')
-      @muscles = (current_user.muscles + default_user.muscles)
+      @muscles = (current_user.muscles.where(muscle_group: MuscleGroup.order('name').first) +
+        default_user.muscles.where(muscle_group: MuscleGroup.order('name').first))
         .sort_by{ |ex| ex.name.downcase }
-      @exercises = Exercise.where(user: current_user) +
-        Exercise.where(user: User.find_by(email: 'default_user@test.com'))
+      @exercises = @muscles.first.exercises
       @workout.gym_sets.build
     else
       redirect_to new_user_session_path
@@ -17,7 +17,7 @@ class WorkoutsController < ApplicationController
   def create
     if params[:ajax]
       workout = Workout.new
-      groups = MuscleGroup.order('name')
+      groups = MuscleGroup.order('lower(name)')
       muscles = (current_user.muscles + default_user.muscles)
         .sort_by{ |ex| ex.name.downcase }
       exercises = Exercise.where(user: current_user) +

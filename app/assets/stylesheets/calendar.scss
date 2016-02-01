@@ -38,6 +38,9 @@ $opacity: 0.9;
 
 .calendar-div {
   margin: 50px;
+  ul {
+    list-style-type: none;
+  }
 }
 
 .week {
@@ -57,6 +60,8 @@ $opacity: 0.9;
     font-size: 18px;
     text-shadow: none;
     height: 300px;
+    overflow: scroll;
+
     .add-workout {
       margin-top: 50px;
       text-align: center;
@@ -114,6 +119,12 @@ $opacity: 0.9;
 }
 
 .muscle-select {
+  font-weight: bold;
+  font-size: 16px;
+  color: red;
+}
+
+.group-select {
   font-weight: bold;
   font-size: 16px;
   color: red;
