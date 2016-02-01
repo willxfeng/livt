@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $(".month .day").css('height', '140px');
   $(".week .day").css('height', '450px');
+  $(".month .day").css('overflow', 'scroll');
 
   $(".day").hover(function(e){
     originalColor = $(this).css('background-color');
